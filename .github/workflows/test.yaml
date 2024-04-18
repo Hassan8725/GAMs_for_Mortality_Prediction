@@ -45,12 +45,17 @@ jobs:
               - "pdm.lock"
               - "**.py"
               - "tests/**"
-      - uses: pdm-project/setup-pdm@v3
+      - name: Set up Python
         if: steps.changes.outputs.code == 'true'
+        uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
-          cache: false
+      - name: Install Nox
+        if: steps.changes.outputs.code == 'true'
+        run: |
+          python -m pip install --upgrade pip
+          pip install nox
       - name: Run tests
         if: steps.changes.outputs.code == 'true'
         run: |
-          pipx run nox --session test
+          nox --session test
