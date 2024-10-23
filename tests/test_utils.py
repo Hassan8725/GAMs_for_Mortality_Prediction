@@ -2,6 +2,10 @@ import pytest
 import sys
 import json
 from pathlib import Path
+import warnings
+
+warnings.filterwarnings("ignore")
+
 sys.path.append(str(Path(__file__).resolve().parent.parent / 'src'))
 
 from utils.db_connection import load_secrets, create_connection

@@ -3,6 +3,10 @@ import pandas as pd
 from unittest.mock import patch, MagicMock
 from pathlib import Path
 import sys
+import warnings
+
+warnings.filterwarnings("ignore")
+
 
 sys.path.append(str(Path(__file__).resolve().parent.parent / 'src'))
 from data_pipeline.extractor import execute_query

@@ -164,3 +164,4 @@ cython_debug/
 # Ignore the database config file
 config.json
 notebooks_testing
+data_engineering\tests

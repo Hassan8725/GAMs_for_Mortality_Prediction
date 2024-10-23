@@ -1,0 +1,1 @@
+{"best_params": {"max_bins": 839, "max_interaction_bins": 23, "interactions": 0, "outer_bags": 19, "inner_bags": 3, "learning_rate": 0.018033149132975924, "min_samples_leaf": 43, "max_leaves": 4, "max_rounds": 14383, "early_stopping_rounds": 29, "smoothing_rounds": 161, "greedy_ratio": 1.228248604505462}, "best_value": 0.861903007608367}

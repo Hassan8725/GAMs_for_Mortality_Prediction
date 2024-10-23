@@ -4,6 +4,10 @@ import numpy as np
 from pygam import LogisticGAM
 import sys
 from pathlib import Path
+import warnings
+
+warnings.filterwarnings("ignore")
+
 
 sys.path.append(str(Path(__file__).resolve().parent.parent / 'src'))
 from gams.logistic_gam import train_logistic_gam_model
@@ -35,5 +39,5 @@ def test_train_logistic_gam_model(sample_data):
     # Check the shape of the predictions
     assert len(results['y_pred']) == len(X_test)
 
-# if __name__ == "__main__":
-#     pytest.main()
+if __name__ == "__main__":
+    pytest.main()
