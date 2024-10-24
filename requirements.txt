@@ -115,7 +115,6 @@ python-dotenv
 python-utils
 pytz
 PyWavelets
-pywin32
 PyYAML
 pyzmq
 regex
