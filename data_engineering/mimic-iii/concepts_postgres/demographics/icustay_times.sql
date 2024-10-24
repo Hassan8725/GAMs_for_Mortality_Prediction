@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS icustay_times; CREATE TABLE icustay_times AS 
+DROP TABLE IF EXISTS icustay_times; CREATE TABLE icustay_times AS
 with h as
 (
   select

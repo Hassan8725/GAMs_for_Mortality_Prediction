@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS vasopressor_durations; CREATE TABLE vasopressor_durations AS 
+DROP TABLE IF EXISTS vasopressor_durations; CREATE TABLE vasopressor_durations AS
 -- This query extracts durations of vasopressor administration
 -- It groups together any administration of the below list of drugs:
 --  norepinephrine - 30047,30120,221906

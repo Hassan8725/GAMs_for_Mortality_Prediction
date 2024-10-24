@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS abx_prescriptions_list; CREATE TABLE abx_prescriptions_list AS 
+DROP TABLE IF EXISTS abx_prescriptions_list; CREATE TABLE abx_prescriptions_list AS
 with t1 as
 (
   select

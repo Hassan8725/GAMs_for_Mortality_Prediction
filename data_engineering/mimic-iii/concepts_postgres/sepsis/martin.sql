@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS martin; CREATE TABLE martin AS 
+DROP TABLE IF EXISTS martin; CREATE TABLE martin AS
 -- ICD-9 codes for sepsis as validated by Martin et al.
 
 -- Greg S. Martin, David M. Mannino, Stephanie Eaton, and Marc Moss. The epidemiology of

@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS code_status; CREATE TABLE code_status AS 
+DROP TABLE IF EXISTS code_status; CREATE TABLE code_status AS
 -- This query extracts:
 --    i) a patient's first code status
 --    ii) a patient's last code status

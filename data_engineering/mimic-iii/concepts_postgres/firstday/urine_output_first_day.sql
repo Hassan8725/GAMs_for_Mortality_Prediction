@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS urine_output_first_day; CREATE TABLE urine_output_first_day AS 
+DROP TABLE IF EXISTS urine_output_first_day; CREATE TABLE urine_output_first_day AS
 -- ------------------------------------------------------------------
 -- Purpose: Create a view of the urine output for each ICUSTAY_ID over the first 24 hours.
 -- ------------------------------------------------------------------

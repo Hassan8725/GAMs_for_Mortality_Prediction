@@ -59,7 +59,7 @@ select
   ie.icustay_id
   , COALESCE(pvt.charttime, fi.charttime) AS charttime
   , COALESCE(pvt.valuenum, fi.fio2_chartevents) AS fio2
-from 
+from
 (
     -- one row per icustay_id/charttime
     SELECT hadm_id, charttime

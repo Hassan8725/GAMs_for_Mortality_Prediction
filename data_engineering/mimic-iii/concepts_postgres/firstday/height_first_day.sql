@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS height_first_day; CREATE TABLE height_first_day AS 
+DROP TABLE IF EXISTS height_first_day; CREATE TABLE height_first_day AS
 -- This query extracts heights for adult ICU patients.
 -- It uses all information from the patient's first ICU day.
 -- This is done for consistency with other queries - it's not necessarily needed.

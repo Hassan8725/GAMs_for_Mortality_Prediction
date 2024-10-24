@@ -6,7 +6,7 @@ This folder contains:
 
 ## Creation of the ccs_multi_level file
 
-Download the original file from CCS: 
+Download the original file from CCS:
 
 ```
 wget https://www.hcup-us.ahrq.gov/toolssoftware/ccs/Multi_Level_CCS_2015.zip

@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS blood_gas_first_day_arterial; CREATE TABLE blood_gas_first_day_arterial AS 
+DROP TABLE IF EXISTS blood_gas_first_day_arterial; CREATE TABLE blood_gas_first_day_arterial AS
 
 with stg_spo2 as
 (

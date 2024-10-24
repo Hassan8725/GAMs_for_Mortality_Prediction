@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS elixhauser_ahrq_v37_no_drg; CREATE TABLE elixhauser_ahrq_v37_no_drg AS 
+DROP TABLE IF EXISTS elixhauser_ahrq_v37_no_drg; CREATE TABLE elixhauser_ahrq_v37_no_drg AS
 -- This code uses the latest version of Elixhauser provided by AHRQ
 -- However, it does *not* filter based on diagnosis related groups (DRGs)
 -- As such, "comorbidities" identified are more likely to be associated with the primary reason for their hospital stay

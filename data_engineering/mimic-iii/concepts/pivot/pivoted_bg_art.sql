@@ -1,5 +1,5 @@
 -- This query requires the pivoted_bg table to be generated.
--- It extracts only arterial blood gas samples - either explicitly stated or 
+-- It extracts only arterial blood gas samples - either explicitly stated or
 -- inferred by a hard-coded logistic regression model.
 with stg_spo2 as
 (

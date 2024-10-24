@@ -63,7 +63,7 @@ do
 
   # make the sub-folder for postgres if it does not exist
   mkdir -p "$TARGET_PATH/${d}"
-  
+
   # convert the bigquery script to psql and output it to the appropriate subfolder
   echo -n " ${d}.${tbl} .."
 
@@ -144,7 +144,7 @@ do
 
   # make the sub-folder for postgres if it does not exist
   mkdir -p "$TARGET_PATH/${d}"
-  
+
   # convert the bigquery script to psql and output it to the appropriate subfolder
   echo -n " ${d}.${tbl} .."
   if ! [[ "$DIR_AND_TABLES_ALREADY_IN_PSQL" =~ "$d.$tbl" ]]; then

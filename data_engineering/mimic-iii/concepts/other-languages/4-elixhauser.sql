@@ -357,7 +357,7 @@ SELECT icd.subject_id,
       MAX(
       CASE
         WHEN icd.icd9_alpha IS NULL
-        AND icd.icd9_numeric BETWEEN 250 AND 250.33        
+        AND icd.icd9_numeric BETWEEN 250 AND 250.33
         AND drg.diabetes = 0
         THEN 1
         ELSE 0
@@ -387,7 +387,7 @@ SELECT icd.subject_id,
       MAX(
       CASE
         WHEN ((icd.icd9_alpha IS NULL
-        AND (icd.icd9_numeric = 403.11 
+        AND (icd.icd9_numeric = 403.11
         OR icd.icd9_numeric = 403.91
         OR icd.icd9_numeric = 404.12
         OR icd.icd9_numeric = 404.92
@@ -451,7 +451,7 @@ SELECT icd.subject_id,
       MAX(
       CASE
         WHEN icd.icd9_alpha IS NULL
-        AND icd.icd9_numeric BETWEEN 42 AND 44.9        
+        AND icd.icd9_numeric BETWEEN 42 AND 44.9
         AND drg.hiv = 0
         THEN 1
         ELSE 0
@@ -460,7 +460,7 @@ SELECT icd.subject_id,
       MAX(
       CASE
         WHEN ((icd.icd9_alpha IS NULL
-        AND (icd.icd9_numeric BETWEEN 200 AND 202.38 
+        AND (icd.icd9_numeric BETWEEN 200 AND 202.38
         OR icd.icd9_numeric BETWEEN 202.5 AND 203.01
         OR icd.icd9_numeric BETWEEN 203.8 AND 203.81
         OR icd.icd9_numeric = 238.6
@@ -477,7 +477,7 @@ SELECT icd.subject_id,
       MAX(
       CASE
         WHEN icd.icd9_alpha IS NULL
-        AND icd.icd9_numeric BETWEEN 196 AND 199.1        
+        AND icd.icd9_numeric BETWEEN 196 AND 199.1
         AND drg.cancer = 0
         THEN 1
         ELSE 0
@@ -523,7 +523,7 @@ SELECT icd.subject_id,
       MAX(
       CASE
         WHEN icd.icd9_alpha IS NULL
-        AND icd.icd9_numeric = 278        
+        AND icd.icd9_numeric = 278
         AND (drg.obesity_procedure = 0 AND drg.nutrition_metabolic = 0)
         THEN 1
         ELSE 0
@@ -532,7 +532,7 @@ SELECT icd.subject_id,
       MAX(
       CASE
         WHEN icd.icd9_alpha IS NULL
-        AND icd.icd9_numeric BETWEEN 260 AND 263.9        
+        AND icd.icd9_numeric BETWEEN 260 AND 263.9
         AND drg.nutrition_metabolic = 0
         THEN 1
         ELSE 0
@@ -541,7 +541,7 @@ SELECT icd.subject_id,
       MAX(
       CASE
         WHEN icd.icd9_alpha IS NULL
-        AND icd.icd9_numeric BETWEEN 276 AND 276.9        
+        AND icd.icd9_numeric BETWEEN 276 AND 276.9
         AND drg.nutrition_metabolic = 0
         THEN 1
         ELSE 0
@@ -550,7 +550,7 @@ SELECT icd.subject_id,
       MAX(
       CASE
         WHEN icd.icd9_alpha IS NULL
-        AND icd.icd9_numeric = 2800        
+        AND icd.icd9_numeric = 2800
         AND drg.anemia = 0
         THEN 1
         ELSE 0

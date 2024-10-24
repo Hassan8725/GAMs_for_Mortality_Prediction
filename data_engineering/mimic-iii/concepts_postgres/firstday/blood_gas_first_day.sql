@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS blood_gas_first_day; CREATE TABLE blood_gas_first_day AS 
+DROP TABLE IF EXISTS blood_gas_first_day; CREATE TABLE blood_gas_first_day AS
 -- The aim of this query is to pivot entries related to blood gases and
 -- chemistry values which were found in LABEVENTS
 

@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS ventilation_classification; CREATE TABLE ventilation_classification AS 
+DROP TABLE IF EXISTS ventilation_classification; CREATE TABLE ventilation_classification AS
 -- Identify The presence of a mechanical ventilation using settings
 select
   icustay_id, charttime

@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS ventilation_durations; CREATE TABLE ventilation_durations AS 
+DROP TABLE IF EXISTS ventilation_durations; CREATE TABLE ventilation_durations AS
 -- This query extracts the duration of mechanical ventilation
 -- The main goal of the query is to aggregate sequential ventilator settings
 -- into single mechanical ventilation "events". The start and end time of these

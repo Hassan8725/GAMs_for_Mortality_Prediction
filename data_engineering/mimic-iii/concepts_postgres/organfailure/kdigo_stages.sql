@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS kdigo_stages; CREATE TABLE kdigo_stages AS 
+DROP TABLE IF EXISTS kdigo_stages; CREATE TABLE kdigo_stages AS
 -- This query checks if the patient had AKI according to KDIGO.
 -- AKI is calculated every time a creatinine or urine output measurement occurs.
 -- Baseline creatinine is defined as the lowest creatinine in the past 7 days.
@@ -20,7 +20,7 @@ with cr_stg AS
         -- require that the patient first achieve ... acute increase >= 0.3 within 48 hr
         -- *or* an increase of >= 1.5 times baseline
         and (cr.creat_low_past_48hr <= 3.7 OR cr.creat >= (1.5*cr.creat_low_past_7day))
-            then 3 
+            then 3
         -- TODO: initiation of RRT
         when cr.creat >= (cr.creat_low_past_7day*2.0) then 2
         when cr.creat >= (cr.creat_low_past_48hr+0.3) then 1

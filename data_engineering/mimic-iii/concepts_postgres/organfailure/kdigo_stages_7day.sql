@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS kdigo_stages_7day; CREATE TABLE kdigo_stages_7day AS 
+DROP TABLE IF EXISTS kdigo_stages_7day; CREATE TABLE kdigo_stages_7day AS
 -- This query checks if the patient had AKI during the first 7 days of their ICU
 -- stay according to the KDIGO guideline.
 -- https://kdigo.org/wp-content/uploads/2016/10/KDIGO-2012-AKI-Guideline-English.pdf
@@ -28,7 +28,7 @@ WITH cr_aki AS
     , k.charttime
     , k.uo_rt_6hr, k.uo_rt_12hr, k.uo_rt_24hr
     , k.aki_stage_uo
-    , ROW_NUMBER() OVER 
+    , ROW_NUMBER() OVER
     (
       PARTITION BY k.icustay_id
       ORDER BY k.aki_stage_uo DESC, k.uo_rt_24hr DESC, k.uo_rt_12hr DESC, k.uo_rt_6hr DESC

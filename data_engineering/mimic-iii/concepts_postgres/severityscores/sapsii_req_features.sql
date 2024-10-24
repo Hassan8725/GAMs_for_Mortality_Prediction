@@ -1,5 +1,5 @@
 -- Drop the table if it already exists
-DROP TABLE IF EXISTS sapsii_req_features; 
+DROP TABLE IF EXISTS sapsii_req_features;
 
 -- Create the new table with original features instead of discretized scores
 CREATE TABLE sapsii_req_features AS

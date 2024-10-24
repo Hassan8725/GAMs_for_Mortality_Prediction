@@ -22,13 +22,13 @@ with ce as
           , 151 -- "Dialysis Site Appear";37345
           , 152 -- "Dialysis Type";61449
         ) THEN 1
-        WHEN ce.itemid = 582 AND value IN 
+        WHEN ce.itemid = 582 AND value IN
         (
           'CAVH Start', 'CVVHD Start', 'Hemodialysis st',
           'CAVH D/C', 'CVVHD D/C', 'Hemodialysis end',
           'Peritoneal Dial'
         ) THEN 1
-        WHEN ce.itemid IN (229, 235, 241, 247, 253, 259, 265, 271) AND value = 'Dialysis Line' 
+        WHEN ce.itemid IN (229, 235, 241, 247, 253, 259, 265, 271) AND value = 'Dialysis Line'
           THEN 1
         -- WHEN ce.itemid = 917 AND value IN
         -- (
@@ -104,12 +104,12 @@ with ce as
       ELSE 0 END
       AS dialysis_present
     , CASE
-        WHEN ce.itemid = 582 AND value IN 
+        WHEN ce.itemid = 582 AND value IN
         (
           'CAVH Start', 'CVVHD Start', 'Hemodialysis st',
           'Peritoneal Dial'
         ) THEN 1
-        WHEN ce.itemid = 582 AND value IN 
+        WHEN ce.itemid = 582 AND value IN
         (
           'CAVH D/C', 'CVVHD D/C', 'Hemodialysis end'
         ) THEN 0
@@ -149,7 +149,7 @@ with ce as
         -- itemids which imply a certain dialysis mode
 
         -- peritoneal dialysis
-        WHEN ce.itemid IN 
+        WHEN ce.itemid IN
         (
             225810 -- | Dwell Time (Peritoneal Dialysis) | Dialysis
           , 225806 -- | Volume In (PD)                   | Dialysis
@@ -201,16 +201,16 @@ with ce as
     ,259 -- INV Line#6 [Type]
     ,265 -- INV Line#7 [Type]
     ,271 -- INV Line#8 [Type]
-    
+
     -- dialysis consults can't be 100% guaranteed to be active
     -- ,466 -- Nursing Consultation
     -- diagnosis has 6 or 7 dx related to dialysis, probably not worth including
     -- as the chart time isn't going to match the start time of dialysis
     -- , 917 -- Diagnosis/op
     -- ,7949 -- "Calcium for CVVH" - only has 2 null values
-    
+
     -- === MetaVision itemids === --
-  
+
     -- Checkboxes
     , 226118 -- | Dialysis Catheter placed in outside facility      | Access Lines - Invasive | chartevents        | Checkbox
     , 227357 -- | Dialysis Catheter Dressing Occlusive              | Access Lines - Invasive | chartevents        | Checkbox

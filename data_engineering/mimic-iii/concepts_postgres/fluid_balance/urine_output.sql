@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS urine_output; CREATE TABLE urine_output AS 
+DROP TABLE IF EXISTS urine_output; CREATE TABLE urine_output AS
 -- First we drop the table if it exists
 select oe.icustay_id, oe.charttime
 , SUM(

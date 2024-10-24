@@ -55,7 +55,7 @@ demographics | [heightweight](demographics/heightweight.sql)                    
 demographics | [icustay_detail](demographics/icustay_detail.sql)                            | Information relating to each patient ICU stay.
 demographics | [icustay_hours](demographics/icustay_hours.sql)                              | A table with one row per hour a patient is in the ICU.
 demographics | [icustay_times](demographics/icustay_times.sql)                              | A table with start/stop times for a patient's ICU stay based on the time of their first and last documented heart rate.
-**diagnosis** | | 
+**diagnosis** | |
 diagnosis | [ccs_diagnosis_table_psql](diagnosis/ccs_diagnosis_table_psql.sql)              | Load ICD-9 to CCS mapping (PostgreSQL only).
 diagnosis | [ccs_dx](diagnosis/ccs_dx.sql)                                                  | Load ICD-9 to CCS mapping.
 **durations** | | Start and stop times for administration of various treatments or durations of various phenomena.

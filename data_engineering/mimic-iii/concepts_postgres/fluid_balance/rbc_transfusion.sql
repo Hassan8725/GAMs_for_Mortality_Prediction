@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS rbc_transfusion; CREATE TABLE rbc_transfusion AS 
+DROP TABLE IF EXISTS rbc_transfusion; CREATE TABLE rbc_transfusion AS
 -- Retrieves instances of red blood cell transfusions
 with raw_rbc as (
   SELECT

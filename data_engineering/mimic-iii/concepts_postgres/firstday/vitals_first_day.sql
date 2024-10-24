@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS vitals_first_day; CREATE TABLE vitals_first_day AS 
+DROP TABLE IF EXISTS vitals_first_day; CREATE TABLE vitals_first_day AS
 -- This query pivots the vital signs for the first 24 hours of a patient's stay
 -- Vital signs include heart rate, blood pressure, respiration rate, and temperature
 

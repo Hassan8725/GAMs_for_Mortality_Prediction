@@ -1,7 +1,7 @@
 -- prep height
 WITH ht_in AS
 (
-  SELECT 
+  SELECT
     c.subject_id, c.icustay_id, c.charttime,
     -- Ensure that all heights are in centimeters
     ROUND(CASE
@@ -26,7 +26,7 @@ WITH ht_in AS
 )
 , ht_cm AS
 (
-  SELECT 
+  SELECT
     c.subject_id, c.icustay_id, c.charttime,
     -- Ensure that all heights are in centimeters
     ROUND(CASE
@@ -116,11 +116,11 @@ WITH ht_in AS
     -- inches
     -- F:  IBW = 45.5 kg + 2.3 kg * (height in inches - 60)
     -- M:  IBW = 50 kg + 2.3 kg * (height in inches - 60)
-    
+
     -- cm
     -- F: 45.5 + (0.91 × [height in centimeters − 152.4])
     -- M: 50 + (0.91 × [height in centimeters − 152.4])
-    
+
     SELECT ne.subject_id
     , charttime
     , CASE
@@ -157,7 +157,7 @@ WHERE height IS NOT NULL AND height > 0
 UNION ALL
 SELECT subject_id, charttime, 'noteevents - nutrition' as source
 -- convert the heights
-    , CASE 
+    , CASE
         WHEN height < 80 THEN height*2.54
         ELSE height
     END AS height

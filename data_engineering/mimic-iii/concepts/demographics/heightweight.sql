@@ -8,7 +8,7 @@
 -- prep height
 WITH ht_stg AS
 (
-  SELECT 
+  SELECT
     c.subject_id, c.icustay_id, c.charttime,
     -- Ensure that all heights are in centimeters, and fix data as needed
     CASE
@@ -57,7 +57,7 @@ WITH ht_stg AS
     -- , 226730 -- Height (cm)
   )
 )
-SELECT 
+SELECT
   ie.icustay_id,
   ROUND(CAST(wt.weight_first AS NUMERIC), 2) AS weight_first,
   ROUND(CAST(wt.weight_min AS NUMERIC), 2) AS weight_min,

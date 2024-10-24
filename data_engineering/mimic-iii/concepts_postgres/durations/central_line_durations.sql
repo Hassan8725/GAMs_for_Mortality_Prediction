@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS central_line_durations; CREATE TABLE central_line_durations AS 
+DROP TABLE IF EXISTS central_line_durations; CREATE TABLE central_line_durations AS
 with mv as
 (
   select

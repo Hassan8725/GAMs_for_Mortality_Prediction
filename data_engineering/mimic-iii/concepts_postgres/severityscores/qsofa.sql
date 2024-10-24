@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS qsofa; CREATE TABLE qsofa AS 
+DROP TABLE IF EXISTS qsofa; CREATE TABLE qsofa AS
 -- ------------------------------------------------------------------
 -- Title: Quick Sequential Organ Failure Assessment (qSOFA)
 -- This query extracts the quick sequential organ failure assessment.

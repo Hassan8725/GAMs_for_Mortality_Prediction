@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS saps; CREATE TABLE saps AS 
+DROP TABLE IF EXISTS saps; CREATE TABLE saps AS
 -- ------------------------------------------------------------------
 -- Title: Simplified Acute Physiology Score (SAPS)
 -- This query extracts the simplified acute physiology score.

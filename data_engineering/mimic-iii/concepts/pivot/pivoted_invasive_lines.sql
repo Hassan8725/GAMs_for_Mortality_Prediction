@@ -1,6 +1,6 @@
 WITH stg0 AS
 (
-    SELECT 
+    SELECT
         icustay_id
         , charttime
         , storetime
@@ -19,12 +19,12 @@ WITH stg0 AS
         , CASE WHEN itemid < 8000 THEN value ELSE NULL END AS line_type
         , CASE WHEN itemid > 8000 THEN value ELSE NULL END AS line_site
         -- the stopped column is always present for invasive lines
-        , CASE 
+        , CASE
               WHEN ce.stopped = 'D/C\'d' THEN 1
               WHEN ce.stopped = 'NotStopd' THEN 0
           ELSE NULL END AS line_dc
     FROM `physionet-data.mimiciii_clinical.chartevents` ce
-    WHERE ce.itemid IN 
+    WHERE ce.itemid IN
     (
       229 -- INV Line#1 [Type]
     , 235 -- INV Line#2 [Type]
@@ -48,7 +48,7 @@ WITH stg0 AS
 )
 , stg0_rn AS
 (
-    SELECT 
+    SELECT
         icustay_id
         , charttime
         , line_number
@@ -59,7 +59,7 @@ WITH stg0 AS
 )
 , stg1 AS
 (
-    SELECT 
+    SELECT
         icustay_id
         , charttime
         , line_number
@@ -75,7 +75,7 @@ WITH stg0 AS
 )
 , stg2 AS
 (
-    SELECT 
+    SELECT
         icustay_id
         , charttime
         , line_number
@@ -122,13 +122,13 @@ WITH stg0 AS
         , MAX(charttime) as endtime
     FROM stg3
     -- filter out the D/C'd rows so they don't impact the starttime of future events
-    WHERE line_dc = 0 
+    WHERE line_dc = 0
     GROUP BY icustay_id, line_number, line_event, line_type, line_site
 )
 -- metavision
 , mv AS
 (
-    SELECT 
+    SELECT
         icustay_id
         -- since metavision separates lines using itemid, we can use it as the line number
         , mv.itemid AS line_number
@@ -170,14 +170,14 @@ WITH stg0 AS
 ),
 combined AS
 (
-    select 
+    select
         icustay_id
         , line_type, line_site
         , starttime
         , endtime
     FROM stg4
     UNION DISTINCT
-    select 
+    select
         icustay_id
         , line_type, line_site
         , starttime
@@ -186,7 +186,7 @@ combined AS
 )
 -- as a final step, combine any similar terms together
 -- this was comprehensive as of MIMIC-III v1.4
-select 
+select
     icustay_id
     , CASE
         WHEN line_type IN ('Arterial Line', 'A-Line') THEN 'Arterial'
@@ -226,10 +226,10 @@ select
         WHEN line_site IN ('Left Axilla', 'Left Axilla.') THEN 'Left Axilla'
         WHEN line_site IN ('Left Brachial', 'Left Brachial.') THEN 'Left Brachial'
         WHEN line_site IN ('Left Femoral', 'Left Femoral.') THEN 'Left Femoral'
-        WHEN line_site IN ('Right Antecub', 'Right Antecube') THEN 'Right Antecube' 
-        WHEN line_site IN ('Right Axilla', 'Right Axilla.') THEN 'Right Axilla' 
-        WHEN line_site IN ('Right Brachial', 'Right Brachial.') THEN 'Right Brachial' 
-        WHEN line_site IN ('Right Femoral', 'Right Femoral.') THEN 'Right Femoral' 
+        WHEN line_site IN ('Right Antecub', 'Right Antecube') THEN 'Right Antecube'
+        WHEN line_site IN ('Right Axilla', 'Right Axilla.') THEN 'Right Axilla'
+        WHEN line_site IN ('Right Brachial', 'Right Brachial.') THEN 'Right Brachial'
+        WHEN line_site IN ('Right Femoral', 'Right Femoral.') THEN 'Right Femoral'
         -- 'Left Foot'
         -- 'Left IJ'
         -- 'Left Radial'

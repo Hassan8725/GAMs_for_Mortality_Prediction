@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS mlods; CREATE TABLE mlods AS 
+DROP TABLE IF EXISTS mlods; CREATE TABLE mlods AS
 -- ------------------------------------------------------------------
 -- Title: Modified Logistic organ dysfunction system (mLODS)
 -- This query extracts a modified version of the logistic organ dysfunction system.

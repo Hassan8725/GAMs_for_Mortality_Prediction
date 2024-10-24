@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS neuroblock_dose; CREATE TABLE neuroblock_dose AS 
+DROP TABLE IF EXISTS neuroblock_dose; CREATE TABLE neuroblock_dose AS
 -- This query extracts dose+durations of neuromuscular blocking agents
 -- Note: we assume that injections will be filtered for carevue as they will have starttime = stopttime.
 

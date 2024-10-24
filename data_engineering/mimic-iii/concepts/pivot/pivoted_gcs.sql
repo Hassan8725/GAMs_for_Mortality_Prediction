@@ -37,7 +37,7 @@ with base as
       when ce.ITEMID = 723 and ce.VALUE = '1.0 ET/Trach' then 0
       when ce.ITEMID = 223900 and ce.VALUE = 'No Response-ETT' then 0
       when ce.ITEMID in (723,223900) then ce.valuenum
-      else null 
+      else null
     end) as gcsverbal
   , max(case when ce.ITEMID in (184,220739) then ce.valuenum else null end) as gcseyes
   -- convert the data into a number, reserving a value of 0 for ET/Trach

@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS explicit; CREATE TABLE explicit AS 
+DROP TABLE IF EXISTS explicit; CREATE TABLE explicit AS
 -- This code extracts explicit sepsis using ICD-9 diagnosis codes
 -- That is, the two codes 995.92 (severe sepsis) or 785.52 (septic shock)
 -- These codes are extremely specific to sepsis, but have very low sensitivity

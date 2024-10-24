@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS angus; CREATE TABLE angus AS 
+DROP TABLE IF EXISTS angus; CREATE TABLE angus AS
 -- ICD-9 codes for Angus criteria of sepsis
 
 -- Angus et al, 2001. Epidemiology of severe sepsis in the United States

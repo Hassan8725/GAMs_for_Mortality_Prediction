@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS epinephrine_dose; CREATE TABLE epinephrine_dose AS 
+DROP TABLE IF EXISTS epinephrine_dose; CREATE TABLE epinephrine_dose AS
 -- This query extracts dose+durations of epinephrine administration
 
 -- Requires the weightfirstday table

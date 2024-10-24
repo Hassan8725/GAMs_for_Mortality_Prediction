@@ -30,7 +30,7 @@
 --  The ventilation flag is always 0/1. It cannot be missing, since VENT=0 if no data is found for vent settings.
 
 -- Note:
---  The score is calculated for *all* ICU patients, with the assumption 
+--  The score is calculated for *all* ICU patients, with the assumption
 --  that the user will subselect appropriate ICUSTAY_IDs.
 --  For example, the score is calculated for neonates, but it is likely inappropriate to
 --  actually use the score values for these patients.
@@ -72,7 +72,7 @@ WITH co_hours AS
   -- it can happen that the lowest unventilated PaO2/FiO2 is 68, but the lowest ventilated PaO2/FiO2 is 120
   -- in this case, the SOFA score is 3, *not* 4.
   , MAX(case
-        when vd1.icustay_id is not null then 1 
+        when vd1.icustay_id is not null then 1
         when vd2.icustay_id is not null then 1
     else 0 end) AS mechvent
   from co_hours co
@@ -198,7 +198,7 @@ WITH co_hours AS
         when tempc_min > 35.93 and tempc_min <= 36.39 then 2
         when tempc_max >= 36.89 and tempc_max <= 39.88 then 2
         else 0 end as temp_score
-    ,  case 
+    ,  case
         when SUM(urineoutput) OVER W is null then null
         when SUM(urineoutput) OVER W < 671.09 then 10
         when SUM(urineoutput) OVER W > 6896.80 then 8

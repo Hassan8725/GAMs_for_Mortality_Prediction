@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS dopamine_dose; CREATE TABLE dopamine_dose AS 
+DROP TABLE IF EXISTS dopamine_dose; CREATE TABLE dopamine_dose AS
 -- This query extracts dose+durations of dopamine administration
 
 -- Get drug administration data from CareVue first

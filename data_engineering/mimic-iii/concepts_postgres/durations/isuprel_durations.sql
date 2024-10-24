@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS isuprel_durations; CREATE TABLE isuprel_durations AS 
+DROP TABLE IF EXISTS isuprel_durations; CREATE TABLE isuprel_durations AS
 -- This query extracts durations of isuprel administration
 -- Consecutive administrations are numbered 1, 2, ...
 -- Total time on the drug can be calculated from this table by grouping using ICUSTAY_ID

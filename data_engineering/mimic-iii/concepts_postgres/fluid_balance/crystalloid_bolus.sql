@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS crystalloid_bolus; CREATE TABLE crystalloid_bolus AS 
+DROP TABLE IF EXISTS crystalloid_bolus; CREATE TABLE crystalloid_bolus AS
 with t1 as
 (
   select

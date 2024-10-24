@@ -49,6 +49,6 @@ where (oe.iserror IS NULL OR oe.iserror != 1)
   227488, -- GU Irrigant Volume In
   227489  -- GU Irrigant/Urine Volume Out
   )
-) 
+)
 group by icustay_id, charttime
 order by icustay_id, charttime;

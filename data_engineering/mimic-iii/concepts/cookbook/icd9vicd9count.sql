@@ -8,14 +8,14 @@
 -- Acknowledgement: Credit goes to Kris Kindle
 -- ------------------------------------------------------------------
 
-SELECT COUNT(DISTINCT a.subject_id) 
-AS "Obesity and Dyslipidemia" 
-from `physionet-data.mimiciii_clinical.diagnoses_icd` a 
-INNER JOIN diagnoses_icd b 
-ON a.subject_id = b.subject_id 
+SELECT COUNT(DISTINCT a.subject_id)
+AS "Obesity and Dyslipidemia"
+from `physionet-data.mimiciii_clinical.diagnoses_icd` a
+INNER JOIN diagnoses_icd b
+ON a.subject_id = b.subject_id
 WHERE a.icd9_code
--- 278% relates to obesity 
-LIKE '278%' 
-AND b.icd9_code 
+-- 278% relates to obesity
+LIKE '278%'
+AND b.icd9_code
 -- 272 relates to Dyslipidemia
 LIKE '272%';

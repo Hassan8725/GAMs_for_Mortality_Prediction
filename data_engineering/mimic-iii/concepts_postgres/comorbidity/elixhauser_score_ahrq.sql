@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS elixhauser_score_ahrq; CREATE TABLE elixhauser_score_ahrq AS 
+DROP TABLE IF EXISTS elixhauser_score_ahrq; CREATE TABLE elixhauser_score_ahrq AS
 -- This query provides various methods of combining the Elixhauser components into a single score
 -- The methods are called "vanWalRaven" and "SID30", and "SID29"
 select subject_id, hadm_id

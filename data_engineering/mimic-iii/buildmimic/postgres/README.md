@@ -93,12 +93,12 @@ Locate your `pg_hba.conf` file and update the method of access from "peer" to "m
 
 ```bash
 sudo nano /etc/postgresql/10/main/pg_hba.conf
-``` 
+```
 
 (Path may change on different postgresql version). Change `local all postgres peer` to `local all postgres md5`.
 
-Restart postgresql service with: 
-```bash 
+Restart postgresql service with:
+```bash
 sudo service postgresql restart
 ```
 

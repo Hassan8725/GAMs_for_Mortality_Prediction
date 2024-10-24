@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS rrt; CREATE TABLE rrt AS 
+DROP TABLE IF EXISTS rrt; CREATE TABLE rrt AS
 -- determines if patients received any dialysis during their stay
 
 -- Some example aggregate queries which summarize the data here..

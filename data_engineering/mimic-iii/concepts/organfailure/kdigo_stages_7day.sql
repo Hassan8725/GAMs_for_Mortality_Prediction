@@ -26,7 +26,7 @@ WITH cr_aki AS
     , k.charttime
     , k.uo_rt_6hr, k.uo_rt_12hr, k.uo_rt_24hr
     , k.aki_stage_uo
-    , ROW_NUMBER() OVER 
+    , ROW_NUMBER() OVER
     (
       PARTITION BY k.icustay_id
       ORDER BY k.aki_stage_uo DESC, k.uo_rt_24hr DESC, k.uo_rt_12hr DESC, k.uo_rt_6hr DESC

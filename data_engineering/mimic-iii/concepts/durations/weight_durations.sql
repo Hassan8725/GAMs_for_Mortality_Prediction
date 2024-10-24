@@ -4,7 +4,7 @@
 -- This query extracts weights for adult ICU patients with start/stop times
 -- if an admission weight is given, then this is assigned from intime to outtime
 WITH wt_neonate AS
-( 
+(
     SELECT c.icustay_id, c.charttime
     , MAX(CASE WHEN c.itemid = 3580 THEN c.valuenum END) as wt_kg
     , MAX(CASE WHEN c.itemid = 3581 THEN c.valuenum END) as wt_lb
@@ -29,7 +29,7 @@ WITH wt_neonate AS
         -- clean free-text birth weight data
         CASE
           -- ignore value if there are any non-numeric characters
-          WHEN REGEXP_CONTAINS(c.value, '[^0-9\\.]') THEN NULL 
+          WHEN REGEXP_CONTAINS(c.value, '[^0-9\\.]') THEN NULL
           -- convert grams to kd
           WHEN CAST(c.value AS NUMERIC) > 100 THEN CAST(c.value AS NUMERIC)/1000
           -- keep kg as is, filtering bad values (largest baby ever born was conveniently 9.98kg)
@@ -126,7 +126,7 @@ WITH wt_neonate AS
 -- change charttime to intime for the first admission weight recorded
 , wt_stg2 AS
 (
-  SELECT 
+  SELECT
       wt_stg1.icustay_id
     , ie.intime, ie.outtime
     , case when wt_stg1.weight_type = 'admit' and wt_stg1.rn = 1

@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS norepinephrine_dose; CREATE TABLE norepinephrine_dose AS 
+DROP TABLE IF EXISTS norepinephrine_dose; CREATE TABLE norepinephrine_dose AS
 -- This query extracts dose+durations of norepinephrine administration
 -- Total time on the drug can be calculated from this table by grouping using ICUSTAY_ID
 

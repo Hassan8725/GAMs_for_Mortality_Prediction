@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS elixhauser_ahrq_v37; CREATE TABLE elixhauser_ahrq_v37 AS 
+DROP TABLE IF EXISTS elixhauser_ahrq_v37; CREATE TABLE elixhauser_ahrq_v37 AS
 -- This code uses the latest version of Elixhauser provided by AHRQ
 
 with eliflg as

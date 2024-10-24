@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS vasopressin_dose; CREATE TABLE vasopressin_dose AS 
+DROP TABLE IF EXISTS vasopressin_dose; CREATE TABLE vasopressin_dose AS
 -- This query extracts dose+durations of vasopressin administration
 
 -- Get drug administration data from CareVue first

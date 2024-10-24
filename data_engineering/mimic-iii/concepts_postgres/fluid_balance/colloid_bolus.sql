@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS colloid_bolus; CREATE TABLE colloid_bolus AS 
+DROP TABLE IF EXISTS colloid_bolus; CREATE TABLE colloid_bolus AS
 -- received colloid before admission
 -- 226365  --  OR Colloid Intake
 -- 226376  --  PACU Colloid Intake
@@ -112,7 +112,7 @@ select
   , sum(amount) as colloid_bolus
 from t2
 group by t2.icustay_id, t2.charttime
-UNION ALL 
+UNION ALL
 select
     icustay_id
   , charttime
@@ -120,4 +120,3 @@ select
 from t3
 group by t3.icustay_id, t3.charttime
 order by icustay_id, charttime;
-

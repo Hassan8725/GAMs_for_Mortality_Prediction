@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------------
 --Title: generates a row for every hospital admission per patient to describe the counts of their clinical notes.
---The statement was created for postgresql and it utilizes a function called crosstab from the tablefunc extension in postgresql. 
---First we add the extension tablefunc to allow us to use the crosstab function in line 10 
+--The statement was created for postgresql and it utilizes a function called crosstab from the tablefunc extension in postgresql.
+--First we add the extension tablefunc to allow us to use the crosstab function in line 10
 --The statement will show the count and the type of clinical notes written for each patient in each hospital admission.
 --The prerequisite for this statement is to create  the extension of tablefunc in which we can find crosstab() function.
 -- Notes: this query does not specify a schema. To run it on your local
@@ -131,7 +131,6 @@ CREATE VIEW note_counts AS
   FROM `physionet-data.mimiciii_clinical.admissions`
   LEFT JOIN groupnotes
     ON admissions.hadm_id = groupnotes.hadm_id
-  LEFT JOIN totalnotes 
+  LEFT JOIN totalnotes
     ON admissions.hadm_id = totalnotes.hadm_id
   ORDER BY admissions.subject_id, admissions.hadm_id;
-

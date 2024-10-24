@@ -18,7 +18,7 @@ with cr_stg AS
         -- require that the patient first achieve ... acute increase >= 0.3 within 48 hr
         -- *or* an increase of >= 1.5 times baseline
         and (cr.creat_low_past_48hr <= 3.7 OR cr.creat >= (1.5*cr.creat_low_past_7day))
-            then 3 
+            then 3
         -- TODO: initiation of RRT
         when cr.creat >= (cr.creat_low_past_7day*2.0) then 2
         when cr.creat >= (cr.creat_low_past_48hr+0.3) then 1

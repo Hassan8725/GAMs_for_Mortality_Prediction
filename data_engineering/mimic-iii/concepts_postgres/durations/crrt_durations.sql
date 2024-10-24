@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS crrt_durations; CREATE TABLE crrt_durations AS 
+DROP TABLE IF EXISTS crrt_durations; CREATE TABLE crrt_durations AS
 with crrt_settings as
 (
   select ce.icustay_id, ce.charttime
@@ -125,7 +125,7 @@ with crrt_settings as
     , RRT_end
     , LAG(RRT_end, 1) OVER W AS rrt_ended_prev_row
   FROM crrt_settings
-  WINDOW w AS 
+  WINDOW w AS
   (
     partition by icustay_id, case when RRT=1 or RRT_end=1 then 1 else 0 end
     order by charttime

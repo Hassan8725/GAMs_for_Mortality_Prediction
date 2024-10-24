@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS elixhauser_quan; CREATE TABLE elixhauser_quan AS 
+DROP TABLE IF EXISTS elixhauser_quan; CREATE TABLE elixhauser_quan AS
 -- This code calculates the Elixhauser comorbidities as defined in Quan et. al 2009:
 -- Quan, Hude, et al. "Coding algorithms for defining comorbidities in
 -- ICD-9-CM and ICD-10 administrative data." Medical care (2005): 1130-1139.

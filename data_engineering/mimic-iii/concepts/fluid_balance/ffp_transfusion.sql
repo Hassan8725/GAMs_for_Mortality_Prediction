@@ -37,13 +37,13 @@ pre_icu_ffp as (
     sum(amount) as amount, icustay_id
   FROM `physionet-data.mimiciii_clinical.inputevents_cv`
   WHERE itemid IN (
-    44172,  -- FFP GTT         
-    44236,  -- E.R. FFP        
+    44172,  -- FFP GTT
+    44236,  -- E.R. FFP
     46410,  -- angio FFP
     46418,  -- ER ffp
     46684,  -- ER FFP
     44819,  -- FFP ON FARR 2
-    46530,  -- Floor FFP       
+    46530,  -- Floor FFP
     44044,  -- FFP Drip
     46122,  -- ER in FFP
     45669,  -- ED FFP

@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS labs_first_day; CREATE TABLE labs_first_day AS 
+DROP TABLE IF EXISTS labs_first_day; CREATE TABLE labs_first_day AS
 -- This query pivots lab values taken in the first 24 hours of a patient's stay
 
 -- Have already confirmed that the unit of measurement is always the same: null or the correct unit

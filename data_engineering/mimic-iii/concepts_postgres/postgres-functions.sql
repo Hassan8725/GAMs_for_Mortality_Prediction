@@ -71,7 +71,7 @@ LANGUAGE PLPGSQL;
 -- i.e. encapsulate it in single quotes
 CREATE OR REPLACE FUNCTION DATETIME_DIFF(endtime TIMESTAMP(3), starttime TIMESTAMP(3), datepart TEXT) RETURNS NUMERIC AS $$
 BEGIN
-RETURN 
+RETURN
     EXTRACT(EPOCH FROM endtime - starttime) /
     CASE
         WHEN datepart = 'SECOND' THEN 1.0
@@ -89,7 +89,7 @@ LANGUAGE PLPGSQL;
 
 CREATE OR REPLACE FUNCTION BIGQUERY_FORMAT_TO_PSQL(format_str VARCHAR(255)) RETURNS TEXT AS $$
 BEGIN
-RETURN 
+RETURN
     -- use replace to convert BigQuery string format to postgres string format
     -- only handles a few cases since we don't extensively use this function
     REPLACE(

@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS weight_first_day; CREATE TABLE weight_first_day AS 
+DROP TABLE IF EXISTS weight_first_day; CREATE TABLE weight_first_day AS
 -- This query extracts weights for adult ICU patients on their first ICU day.
 -- It does *not* use any information after the first ICU day, as weight is
 -- sometimes used to monitor fluid balance.

@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS kdigo_uo; CREATE TABLE kdigo_uo AS 
+DROP TABLE IF EXISTS kdigo_uo; CREATE TABLE kdigo_uo AS
 with ur_stg as
 (
   select io.icustay_id, io.charttime

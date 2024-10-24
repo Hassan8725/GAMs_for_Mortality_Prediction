@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS phenylephrine_dose; CREATE TABLE phenylephrine_dose AS 
+DROP TABLE IF EXISTS phenylephrine_dose; CREATE TABLE phenylephrine_dose AS
 -- This query extracts dose+durations of phenylephrine administration
 
 -- Get drug administration data from CareVue first

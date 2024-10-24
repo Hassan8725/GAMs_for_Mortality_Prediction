@@ -1,5 +1,5 @@
 -- THIS SCRIPT IS AUTOMATICALLY GENERATED. DO NOT EDIT IT DIRECTLY.
-DROP TABLE IF EXISTS icustay_detail; CREATE TABLE icustay_detail AS 
+DROP TABLE IF EXISTS icustay_detail; CREATE TABLE icustay_detail AS
 -- ------------------------------------------------------------------
 -- Title: Detailed information on ICUSTAY_ID
 -- Description: This query provides a useful set of information regarding patient
