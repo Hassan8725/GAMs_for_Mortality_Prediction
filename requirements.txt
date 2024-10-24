@@ -38,7 +38,6 @@ filelock
 Flask
 fonttools
 fsspec
--e git+https://github.com/Hassan8725/GAMs_for_Mortality_Prediction.git@ad3a2c6ee5598866084210caf8f5f60351e94514#egg
 gevent
 greenlet
 htmlmin
