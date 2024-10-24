@@ -1,16 +1,14 @@
 import nox
-import platform
-
 
 @nox.session(venv_backend="virtualenv")
-def test(session: nox.Session) -> None:
-    """Run tests with pytest and create coverage report."""
-    # Install base dependencies
+def install(session):
+    """Install all necessary dependencies."""
+    # Install dependencies from requirements.txt
     session.install("-r", "requirements.txt")
+    # Install the package in editable mode if needed
+    session.run("pip", "install", "-e", ".")
 
-
-    # # Install the package in editable mode
-    # session.run("pip", "install", "-e", ".")
-
-    # Run pytest
+@nox.session(venv_backend="virtualenv")
+def test(session):
+    """Run tests."""
     session.run("pytest", *session.posargs)
