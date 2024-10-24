@@ -1,4 +1,4 @@
-name: Test
+name: Continuous Integration Pipeline
 
 on:
   workflow_dispatch:
@@ -24,10 +24,6 @@ concurrency:
 jobs:
   nox-tests:
     runs-on: ${{ matrix.os }}
-    permissions:
-      contents: read
-      pull-requests: read
-    timeout-minutes: 15
     strategy:
       matrix:
         python-version: ["3.11"]
@@ -37,24 +33,21 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: dorny/paths-filter@v2
-        id: changes
-        with:
-          filters: |
-            code:
-              - "**.py"
-              - "tests/**"
+
       - name: Set up Python
-        if: steps.changes.outputs.code == 'true'
         uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
+
       - name: Install Nox
-        if: steps.changes.outputs.code == 'true'
         run: |
           python -m pip install --upgrade pip
-          pip install nox pytest
-      - name: Run tests
-        if: steps.changes.outputs.code == 'true'
+          pip install nox
+
+      - name: Install Dependencies
+        run: |
+          nox --session install
+
+      - name: Run Nox Tests
         run: |
           nox --session test

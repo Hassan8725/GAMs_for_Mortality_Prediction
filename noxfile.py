@@ -1,16 +1,19 @@
-"""Nox sessions."""
 import nox
-from nox.sessions import Session
+import platform
 
 
 @nox.session(venv_backend="virtualenv")
-def test(session: Session) -> None:
+def test(session: nox.Session) -> None:
     """Run tests with pytest and create coverage report."""
-    # Install dependencies from requirements.txt
-    session.install("-r", "requirements.txt")
-    
+    # Install base dependencies
+    session.install("-r", "requirements-base.txt")
+
+    # Install Windows-specific dependencies if running on Windows
+    if platform.system() == "Windows":
+        session.install("-r", "requirements-windows.txt")
+
+    # Install the package in editable mode
+    session.run("pip", "install", "-e", ".")
+
     # Run pytest
-    session.run(
-        "pytest",
-        *session.posargs,
-    )
+    session.run("pytest", *session.posargs)
