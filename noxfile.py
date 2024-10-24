@@ -1,5 +1,6 @@
 import nox
 
+
 @nox.session(venv_backend="virtualenv")
 def install(session):
     """Install all necessary dependencies."""
@@ -7,6 +8,7 @@ def install(session):
     session.install("-r", "requirements.txt")
     # Install the package in editable mode if needed
     session.run("pip", "install", "-e", ".")
+
 
 @nox.session(venv_backend="virtualenv")
 def test(session):
