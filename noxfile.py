@@ -9,8 +9,8 @@ def test(session: nox.Session) -> None:
     session.install("-r", "requirements.txt")
 
 
-    # Install the package in editable mode
-    session.run("pip", "install", "-e", ".")
+    # # Install the package in editable mode
+    # session.run("pip", "install", "-e", ".")
 
     # Run pytest
     session.run("pytest", *session.posargs)
