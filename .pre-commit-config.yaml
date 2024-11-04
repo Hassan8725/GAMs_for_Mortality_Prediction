@@ -9,7 +9,7 @@ repos:
     -   id: check-yaml
         args: ["--unsafe"]
     -   id: check-added-large-files
-        exclude: '(exploratory_notebooks|tests\/assets)'
+        exclude: '(exploratory_notebooks|tests\/assets|thesis_logo\.png)'
     -   id: check-ast
     -   id: requirements-txt-fixer
 
