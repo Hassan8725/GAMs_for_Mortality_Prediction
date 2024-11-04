@@ -6,15 +6,16 @@
 <div align="center">
 
 [![CI Test Pipeline](https://github.com/Hassan8725/GAMs_for_Mortality_Prediction/actions/workflows/ci.yaml/badge.svg)](https://github.com/Hassan8725/GAMs_for_Mortality_Prediction/actions/workflows/ci.yaml)
-[![pre-commit](https://github.com/Hassan8725/GAMs_for_Mortality_Prediction/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/Hassan8725/GAMs_for_Mortality_Prediction/actions/workflows/pre-commit.yaml)
-
+[![pre-commit](https://github.com/Hassan8725/GAMs_for_Mortality_Prediction/actions/workflows/pre-commit.yaml/badge.svg?branch=readme_update)](https://github.com/Hassan8725/GAMs_for_Mortality_Prediction/actions/workflows/pre-commit.yaml)
 [![Python](https://img.shields.io/badge/python-3.12.3-blue.svg)](https://www.python.org/downloads/release/python-3123/)
+
 [![pygam](https://img.shields.io/badge/pygam-0.9.1-blue.svg)](https://pypi.org/project/pygam/0.9.1/)
 [![interpret](https://img.shields.io/badge/interpret-0.6.3-blue.svg)](https://pypi.org/project/interpret/0.6.3/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5.1-blue.svg)](https://pypi.org/project/scikit-learn/1.5.1/)
+[![xgboost](https://img.shields.io/badge/xgboost-2.1.1-blue.svg)](https://pypi.org/project/xgboost/2.1.1/)
 [![shap](https://img.shields.io/badge/shap-0.46.0-blue.svg)](https://pypi.org/project/shap/0.46.0/)
 [![optuna](https://img.shields.io/badge/optuna-4.0.0-blue.svg)](https://pypi.org/project/optuna/4.0.0/)
-[![xgboost](https://img.shields.io/badge/xgboost-2.1.1-blue.svg)](https://pypi.org/project/xgboost/2.1.1/)
+
 [![MIMIC-III](https://img.shields.io/badge/data-MIMIC--III-lightgrey.svg)](https://physionet.org/content/mimiciii/1.4/)
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
