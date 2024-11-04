@@ -29,12 +29,13 @@
 2. [Data Sources](#data-sources)
 3. [Data Engineering Pipeline](#data-engineering-pipeline)
 4. [Methodology](#methodology)
-5. [Results Summary](#results-summary)
-6. [Repository Structure](#repository-structure)
-7. [License and Data Access](#license-and-data-access)
-8. [Getting Started](#getting-started)
-9. [Version Control Steps](#version-control-steps)
-10. [Hyperparameter Tuning Dashboard](#hyperparameter-tuning-dashboard)
+5. [Results](#results)
+6. [Final Analysis](#final-analysis)
+7. [Repository Structure](#repository-structure)
+8. [License and Data Access](#license-and-data-access)
+9. [Getting Started](#getting-started)
+10. [Version Control Steps](#version-control-steps)
+11. [Hyperparameter Tuning Dashboard](#hyperparameter-tuning-dashboard)
 
 ## Project Overview
 This project evaluates the use of **Generalized Additive Models (GAMs)** for mortality prediction in clinical settings, with a particular focus on ICUs. Traditional scoring systems like SAPS and APACHE have limitations in capturing complex, non-linear relationships within clinical data. This study aims to determine if GAMs offer improved prediction accuracy compared to these traditional scoring methods.
@@ -70,11 +71,58 @@ Models are evaluated using key metrics:
 
 This approach helps identify whether GAMs provide significant improvements over traditional scoring systems in ICU mortality prediction.
 
-## Results Summary
-The analysis revealed:
-- **GAMs** achieved higher AUC and F1-scores compared to traditional scoring systems, especially on imbalanced datasets.
-- Tree-based models, such as **Random Forest** and **XGBoost**, also showed strong performance but with less interpretability.
-- **GAMs** demonstrated better calibration and interpretability, making them suitable for clinical applications where understanding model predictions is essential.
+## Results
+
+The tables below summarize the performance of different models (LogisticGAM, EBM GAM, Random Forest, XGBoost) and traditional scoring systems (SAPS-II and APACHE-III) on imbalanced and balanced datasets for mortality prediction. Key evaluation metrics include ROC-AUC, PR-AUC, and F1-Score.
+
+### SAPS-II Score Comparison with GAMs and Tree-Based Models
+
+#### Mortality (Imbalanced Dataset)
+
+| Metric   | LogisticGAM | EBM GAM | Random Forest | XGBoost | SAPS-II Score |
+|----------|-------------|---------|---------------|---------|---------------|
+| ROC-AUC  | 85.04%      | 85.05%  | 85.12%        | 86.95%  | 82.69%        |
+| PR-AUC   | 46.67%      | 46.58%  | 46.38%        | 50.09%  | 41.44%        |
+| F1-Score | 32.64%      | 32.64%  | 46.38%        | 47.95%  | 42.47%        |
+
+#### Mortality (Balanced Dataset)
+
+| Metric   | LogisticGAM | EBM GAM | Random Forest | XGBoost | SAPS-II Score |
+|----------|-------------|---------|---------------|---------|---------------|
+| ROC-AUC  | 84.61%      | 84.55%  | 85.12%        | 89.52%  | 82.09%        |
+| PR-AUC   | 83.72%      | 83.71%  | 46.38%        | 88.48%  | 81.35%        |
+| F1-Score | 75.72%      | 75.49%  | 46.38%        | 81.63%  | 55.90%        |
+
+---
+
+### APACHE-III Score Comparison with GAMs and Tree-Based Models
+
+#### Mortality (Imbalanced Dataset)
+
+| Metric   | LogisticGAM | EBM GAM | Random Forest | XGBoost | APACHE-III Score |
+|----------|-------------|---------|---------------|---------|-------------------|
+| ROC-AUC  | 82.77%      | 82.88%  | 81.14%        | 84.89%  | 79.31%           |
+| PR-AUC   | 45.38%      | 45.32%  | 39.74%        | 49.27%  | 40.08%           |
+| F1-Score | 33.13%      | 31.42%  | 36.39%        | 46.38%  | 25.20%           |
+
+#### Mortality (Balanced Dataset)
+
+| Metric   | LogisticGAM | EBM GAM | Random Forest | XGBoost | APACHE-III Score |
+|----------|-------------|---------|---------------|---------|-------------------|
+| ROC-AUC  | 83.90%      | 83.85%  | 82.80%        | 93.07%  | 80.19%           |
+| PR-AUC   | 83.23%      | 83.19%  | 81.99%        | 92.98%  | 80.15%           |
+| F1-Score | 75.94%      | 75.94%  | 75.42%        | 85.57%  | 23.10%           |
+
+---
+
+## Final Analysis
+
+- **GAMs** achieved higher AUC and F1-scores compared to traditional scoring systems, particularly on imbalanced datasets, indicating their potential for improved predictive accuracy in clinical settings.
+- Tree-based models, such as **Random Forest** and **XGBoost**, also demonstrated strong performance but are generally less interpretable than GAMs.
+- **GAMs** exhibited better calibration and interpretability, making them more suitable for applications in clinical environments where understanding model predictions is essential.
+
+These results suggest that while tree-based models like XGBoost offer strong performance, the flexibility and interpretability of GAMs provide an advantage in critical healthcare applications.
+
 
 ## Repository Structure
 - `.github/workflows`: GitHub Actions workflows for CI/CD.
