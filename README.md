@@ -5,8 +5,7 @@
 
 <div align="center">
 
-[![Continuous Integration Pipeline](https://github.com/Hassan8725/GAMs_for_Mortality_Prediction/actions/workflows/ci.yaml/badge.svg)]
-(https://github.com/Hassan8725/GAMs_for_Mortality_Prediction/actions/workflows/ci.yaml)
+[![CI Test Pipeline](https://github.com/Hassan8725/GAMs_for_Mortality_Prediction/actions/workflows/ci.yaml/badge.svg)](https://github.com/Hassan8725/GAMs_for_Mortality_Prediction/actions/workflows/ci.yaml)
 [![pre-commit](https://github.com/Hassan8725/GAMs_for_Mortality_Prediction/actions/workflows/pre-commit.yaml/badge.svg)](https://github.com/Hassan8725/GAMs_for_Mortality_Prediction/actions/workflows/pre-commit.yaml)
 
 [![Python](https://img.shields.io/badge/python-3.12.3-blue.svg)](https://www.python.org/downloads/release/python-3123/)
